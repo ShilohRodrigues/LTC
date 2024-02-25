@@ -33,24 +33,26 @@ h1 {
   color: var(--primary-active-color);
   font-family: var(--heading-font);
   font-size: 4rem;
-  margin-bottom: 1rem 
+  font-weight: 400;
 }
 h2 {
   font-family: var(--heading-font);
   font-size: 2.7rem;
   margin-bottom: 0.7rem;
+  font-weight: 400;
 }
 h3 {
   font-family: var(--heading-font);
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
+  font-weight: 400;
 }
 @media screen and (max-width: 490px) {
   h1 {
     font-size: 2.5rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 p {
@@ -134,22 +136,6 @@ section {
   display: grid;
   place-items: center;
 }
-.grid-2-col {
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-.grid-col-span-2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-.grid-col-1-span-1 {
-  -ms-grid-column: 1;
-  grid-column: 1;
-}
-.col-3 {
-  grid-template-columns: repeat(3, auto);
-}
 .gap-1 {
   gap: 1rem;
 }
@@ -167,19 +153,6 @@ section {
 }
 .align-top {
   align-items: flex-start !important;
-}
-.col3-flex-item {
-  width: 30%;
-}
-@media screen and (max-width: 700px) {
-  .col3-flex-item {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 425px) {
-  .col3-flex-item {
-    width: 90%;
-  }
 }
 .center-me {
   margin-left: auto;
@@ -327,6 +300,43 @@ header{
     color: var(--primary-active-color);
   }
 }
+.rotating-container {
+  position: relative;
+}
+.rotating-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -25px, 0);
+  }
+}
+.rotating-animation:nth-of-type(1) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+}
+.rotating-animation:nth-of-type(2) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+}
+.rotating-animation:nth-of-type(3) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 4s;
+}
 
 /* Banner styles */
 #myVideo {
@@ -337,7 +347,6 @@ header{
   height: 100%;
   object-fit: cover;
 }
-
 .main-banner {
   position: relative;
   height: 700px;

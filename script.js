@@ -89,6 +89,7 @@ window.addEventListener("resize", () => {
 /** Animations
  *  
  *  Animates sections to slide in or fade in
+ *  Animates the header text in banner
  * 
  */
 const slideInLeftElements = document.getElementsByClassName('slide-in-left');
@@ -132,3 +133,15 @@ function animate() {
   }
 
 }
+
+const rotatingTexts = document.getElementsByClassName('rotating-header');
+rotatingTexts[rotatingTexts.length-1].addEventListener('animationend', () => {
+  for (let i=0; i < rotatingTexts.length; i++) {
+    rotatingTexts[i].classList.remove('rotating-animation');
+  }
+  setTimeout(function(){
+    for (let i=0; i < rotatingTexts.length; i++) {
+      rotatingTexts[i].classList.add('rotating-animation');
+    }
+  }, 500);
+})
