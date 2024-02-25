@@ -177,6 +177,14 @@ section {
   justify-content: center;
   align-items: center;
 }
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .flex-reverse {
+    flex-direction: unset;
+  }
+}
 .col3-flex-item {
   width: 30%;
 }
