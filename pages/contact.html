@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dedicated and experienced nutritionist, and strength and condition coach. Tailored workout plans, diets, and weight cuts for athletes." />
+  <meta name="keywords" content="nutrition performance, strength, conditioning, meal plans, diets, mma, weight cut" />
+  <meta name="robots" content="contact, follow">
+  <!-- Social sharing -->
+  <meta property="og:title" content="LTC Nutrition & Performance | Contact" />
+  <meta property="type" content="Webpage"/>
+  <meta property="url" content=""/> <!-- Missing !! -->
+  <meta property="og:description" content="Dedicated and experienced nutritionist, strength, and condition coach. Tailored workout plans, diets, and weight cuts for athletes." /> 
+  <meta property="og:image" content="" /> <!-- Missing !! -->
+  <meta property="og:image:secure_url" content="" /> <!-- Missing !! -->
+  <link rel="icon" type="image/x-icon" href="/images/Favicon.ico?">
+  <link rel="canonical" href=""> <!-- Missing !! -->
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+  <title>LTC Nutrition & Performance | Contact</title>
+  <!-- Google Stuff -->
+  <script type="application/ld+json">
+    {"@context" : "https://ltc.com",
+     "@type" : "Nutrition and Condition Coach",  
+      "name" : "LTC Nutrition & Performance",
+      "url" : "https://ltc.com", 
+      "logo": "https://ltc.com/images/SocialImg.png" }
+  </script>
+</head>
+<body>
+  <div id="headerContainer" class="full-width grid-center header-container">
+    <header class="page-width">
+      <a href="/" class="logo" aria-label="Click to return to home page">
+        <object data="/images/SmallLogo.svg" title="Company Logo" alt="Company Logo">Home page</object>
+      </a>
+      <div id="hamburgerMenu" class="header-icon"> </div>
+      <nav id="desktopNav" class="header-nav header-nav-desktop invert-txt">
+        <a href="/" class="header-item">Home</a>
+        <a href="/#services" class="header-item">Services</a>
+        <a href="pages/ltccooks.html" class="header-item">LTC Cooks</a>   
+        <a href="/#about" class="header-item">About Us</a>
+        <a href="contact.html" class="header-item active-header">Contact</a>    
+      </nav>
+    </header>
+  </div>
+  <nav id="mobileNav" class="header-nav header-nav-mobile">
+    <div id="closeMenu" class="close-icon"> </div>
+    <a href="/" class="header-item">Home</a>
+    <a href="/#services" class="header-item">Services</a>
+    <a href="#" class="header-item">LTC Cooks</a>   
+    <a href="/#about" class="header-item">About Us</a>
+    <a href="contact.html" class="header-item active-mobile-header">Contact</a> 
+  </nav>
+
+  <div id="banner" class="mini-banner secondary-bg full-width grid-center">
+    <div class="banner-content page-width">
+      <div class="banner-text">
+        <h1>Contact Us</h1>
+        <p>We are equipped to help athletes of any kind with a wide range of goals.</p>
+        <p>Get a head start on your goals by reaching out to us to book a consultation and be sure to include any relevant information.</p>
+      </div>  
+    </div>
+  </div>
+
+  <main id="mainContent" class="extendBanner">
+    <section id="contact" class="full-width grid-center">
+      <div class="page-width grid gap-1 fade-in">
+        <p class="tagline">GET IN TOUCH</p>
+        <div class="page-width-small center-me">
+          <p>Leave your name and email below, and we will be in contact with you as soon as possible!</p>
+          <form 
+            method="POST"
+            name="contact_form"
+            id="contact_form" 
+            class="grid-center gap full-width" 
+            data-netlify="true" 
+            action="success.html">
+            <input type="hidden" name="subject" value="LTC Contact Form Submission" />
+            <div class="input-group">
+                <label for="clientName">Name</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="input-group">
+                <label for="clientEmail">Email</label>
+                <input type="text" id="clientEmail" name="email" required>
+            </div>
+            <div class="input-group" id="inputNumber">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" name="phoneNumber" id="phoneNumber">
+            </div>
+            <div class="input-group">
+                <label for="messageInput">Message</label>
+                <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
+            </div> 
+            <input class="btn big-btn btn-invert submit-btn" type="submit" name="submitForum" id="submitForum"> 
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="" class="full-width secondary-bg invert-txt grid-center">
+    <footer class="page-width grid gap">
+      <div class="footer-block footer-logo">
+        <a href="/" class="logo big-logo" aria-label="Click to return to home page">
+          <object data="/images/FullLogo.svg" alt="Company Logo" title="Company Logo"></object>
+        </a>
+        <p>Tagline - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae numquam distinctio autem reprehenderit ratione porro beatae deleniti enim?</p>
+      </div>     
+      <div class="footer-block">
+        <h3>Navigation</h3>
+        <nav>
+          <a href="/" class="footer-item">Home</a>
+          <a href="/#services" class="footer-item">Services</a>
+          <a href="#" class="footer-item">LTC Cooks</a> 
+          <a href="/#about" class="footer-item">About Us</a>  
+          <a href="contact.html" class="footer-item">Contact</a>         
+        </nav>
+      </div>
+      <div class="footer-block">
+        <h3>Services</h3>
+        <nav>
+          <p class="footer-item">Service 1</p>
+          <p class="footer-item">Service 2</p>
+          <p class="footer-item">Service 3</p>
+          <p class="footer-item">Service 4</p>
+          <p class="footer-item">Service 5</p>
+        </nav>
+      </div>
+    </footer>
+  </section>
+  <div class="full-width grid-center secondary-bg copyright">
+    <div class="page-width">
+      <p>Made with &#x2764;&#xfe0f; by <a class="inline-link" href="index.html">Shiloh Web Designs</a></p>
+      <p>© <script>document.write(new Date().getFullYear())</script> LTC Nutrition & Performance. All rights reserved</p>    
+    </div>
+  </div>
+</body>
+</html>

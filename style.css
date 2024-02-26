@@ -43,7 +43,7 @@ h2 {
 }
 h3 {
   font-family: var(--heading-font);
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.7rem;
   font-weight: 400;
 }
@@ -113,7 +113,11 @@ object {
   transform: translateY(-50%) rotate(-90deg);
 }
 .big-btn {
+  margin-top: 2rem;
   padding: 0.5rem 3rem;
+}
+.btn-invert {
+  color: #000;
 }
 .social-links {
   display: -webkit-box;
@@ -231,16 +235,17 @@ section {
 .tagline {
   display: flex;
   align-items: center;
-  text-wrap: nowrap;
   font-size: 1.7rem;
   gap: 2rem;
+  white-space: nowrap;
 }
 .tagline:before {
   content: '';
   display: block;
   background-color: var(--primary-active-color);
   height: 0.2rem;
-  width: 5rem;
+  width: 100%;
+  max-width: 3rem;
 }
 .tagline:after {
   content: '';
@@ -409,17 +414,16 @@ header{
 }
 
 /* Banner styles */
-#myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .main-banner {
   position: relative;
   height: 700px;
+  max-height: 100vh;
+  z-index: 2;
+  color: #fff;
+}
+.mini-banner {
+  position: relative;
+  height: 300px;
   max-height: 100vh;
   z-index: 2;
   color: #fff;
@@ -428,10 +432,32 @@ header{
   height: 100%;
   position: relative;
 }
-.banner-text {
+.main-banner .banner-text {
   position: absolute;
   top: 30%;
   max-width: 90%;
+}
+.mini-banner .banner-text {
+  position: absolute;
+  top: 50%;
+  max-width: 90%;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.extendBanner:before {
+  content: '';
+  display: block;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--bg-secondary);
+  z-index: -1;
 }
 
 /* Main Styles */
@@ -440,8 +466,6 @@ main {
   width: 100%;
   background: var(--bg);
   z-index: 1;
-
-  height: 1500px;
 }
 
 /* service card styles */
@@ -500,13 +524,12 @@ main {
 
 /* form styles */
 #contact > div {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #fff;
   border-radius: 15px;
-  backdrop-filter: blur(3px);
+  border: 2px solid var(--primary-color);
   padding-top: 1rem;
   width: 95% !important;
   max-width: 600px;
+  background-color: var(--bg);
 }
 form {
   padding: 1rem 0;
@@ -595,7 +618,7 @@ footer > :not(.footer-logo) {
 @media screen and (max-width: 600px) {
   footer {
     grid-template-columns: auto auto;
-    justify-content: start;
+    justify-content: center;
   }
   footer .footer-block:first-of-type {
     grid-column: 1 / span 2;
@@ -608,7 +631,7 @@ footer > :not(.footer-logo) {
 .copyright {
   width: 100%;
   color: #fff;
-  border-top: 1px #fff solid;
+  border-top: 2px #fff solid;
   padding: 0.5rem 0;
   font-size: 0.7rem;
 }
