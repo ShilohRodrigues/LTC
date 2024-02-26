@@ -283,7 +283,6 @@ header{
   max-width: 100%;
   width: auto;
   height: 100px;
-  resize: both;
 }
 .big-logo {
   height: 150px !important;
@@ -579,6 +578,7 @@ form {
   position: sticky;
   bottom: 0;
   overflow: visible;
+  z-index: -1;
 }
 footer {
   grid-template-columns: auto auto auto;
