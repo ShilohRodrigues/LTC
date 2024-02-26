@@ -245,7 +245,6 @@ section {
   background-color: var(--primary-active-color);
   height: 0.2rem;
   width: 100%;
-  max-width: 3rem;
 }
 .tagline:after {
   content: '';
