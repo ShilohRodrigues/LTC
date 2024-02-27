@@ -145,6 +145,9 @@ object {
 section {
   padding: 5rem 0;
 }
+.small-section {
+  padding: 1rem 0;
+}
 .full-width {
   width: 100%;
 }
@@ -258,6 +261,28 @@ section {
   height: 0.2rem;
   background-color: var(--primary-color);
   margin: 2rem 0;
+}
+.quote {
+  position: relative;
+}
+.quote:before, .quote:after {
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  background-image: url(images/icons/quote.svg);
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  position: absolute; 
+}
+.quote:before {
+  top: -2.5rem;
+  left: 0;
+  transform: rotate(180deg);
+}
+.quote:after {
+  bottom: -1rem;
+  right: 0;
 }
 
 /* Header Styles */
@@ -417,7 +442,6 @@ header{
   position: relative;
   height: 700px;
   max-height: 100vh;
-  z-index: 2;
   color: #fff;
 }
 .mini-banner {
