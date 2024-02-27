@@ -63,16 +63,21 @@ p {
   color: var(--primary-color) !important;
 }
 .bullet {
-  display: flex;
-  gap: 1.5rem;
   margin-bottom: 1rem;
+  margin-left: 2rem;
+  position: relative;
 }
 .bullet:before {
-  content: url(images/icons/star.svg);
+  content: "";
+  background-image: url(./images/icons/star.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   display: block;
   height: 1rem;
   width: 1rem;
-
+  position: absolute;
+  left: -2rem;
+  top: 0.25rem;
 }
 a, a:visited {
   display: block;
@@ -150,6 +155,11 @@ section {
 }
 .full-width {
   width: 100%;
+}
+.primary-bg {
+  background: var(--bg);
+  color: var(--txt-color);
+  padding: 1rem;
 }
 .secondary-bg {
   background: var(--bg-secondary);
@@ -481,6 +491,13 @@ header{
   position: absolute;
   background-color: var(--bg-secondary);
   z-index: -1;
+}
+.cooks-bg {
+  color: #fff;
+  background-image: url(./images/CooksBg.webp);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /* Main Styles */

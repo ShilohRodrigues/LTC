@@ -106,7 +106,7 @@ function animate() {
   for (let i = 0; i < slideInLeftElements.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = slideInLeftElements[i].getBoundingClientRect().top;
-    let elementVisible = 250;
+    let elementVisible = 150;
     
     if (elementTop < windowHeight - elementVisible) {
       slideInLeftElements[i].classList.add("slide-in-animate");
@@ -115,7 +115,7 @@ function animate() {
   for (let i = 0; i < slideInUpElements.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = slideInUpElements[i].getBoundingClientRect().top;
-    let elementVisible = 250;
+    let elementVisible = 150;
     
     if (elementTop < windowHeight - elementVisible) {
       slideInUpElements[i].classList.add("slide-in-animate");
@@ -125,7 +125,7 @@ function animate() {
   for (let i = 0; i < fadeInElements.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = fadeInElements[i].getBoundingClientRect().top;
-    let elementVisible = 250;
+    let elementVisible = 150;
     
     if (elementTop < windowHeight - elementVisible) {
       fadeInElements[i].classList.add("fade-in-animate");
