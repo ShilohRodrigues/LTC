@@ -1,4 +1,4 @@
-@font-face { font-family: Oswald; src: url('fonts/Oswald-VariableFont_wght.ttf'); font-display: swap;}
+@font-face { font-family: Oswald; src: url('../fonts/Oswald-VariableFont_wght.ttf'); font-display: swap;}
 
 /* Resetting default styles */
 :root {
@@ -62,6 +62,9 @@ p {
 .emphasize {
   color: var(--primary-color) !important;
 }
+.italic {
+  font-style: italic;
+}
 .bullet {
   margin-bottom: 1rem;
   margin-left: 2rem;
@@ -69,7 +72,7 @@ p {
 }
 .bullet:before {
   content: "";
-  background-image: url(./images/icons/star.svg);
+  background-image: url(../images/icons/star.svg);
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -109,7 +112,7 @@ object {
   background: var(--primary-active-color);
 }
 .btn:after {
-  content: url(images/icons/arrow.svg);
+  content: url(../images/icons/arrow.svg);
   position: absolute;
   right: 0;
   top: 50%;
@@ -151,7 +154,10 @@ section {
   padding: 5rem 0;
 }
 .small-section {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+.med-section {
+  padding: 0 0 5rem 0;
 }
 .full-width {
   width: 100%;
@@ -196,6 +202,9 @@ section {
 }
 .flex-reverse {
   flex-direction: row-reverse;
+}
+.flex-end {
+  align-items: end;
 }
 @media screen and (max-width: 768px) {
   .flex-reverse {
@@ -280,18 +289,18 @@ section {
   display: block;
   height: 3rem;
   width: 3rem;
-  background-image: url(images/icons/quote.svg);
+  background-image: url(../images/icons/quote.svg);
   background-size: 3rem 3rem;
   background-repeat: no-repeat;
   position: absolute; 
 }
 .quote:before {
-  top: -2.5rem;
+  top: -2rem;
   left: 0;
   transform: rotate(180deg);
 }
 .quote:after {
-  bottom: -1rem;
+  bottom: -2rem;
   right: 0;
 }
 
@@ -328,14 +337,14 @@ header{
 }
 .header-icon {
   display: none;
-  background: url(images/icons/hamburger.svg) no-repeat center;
+  background: url(../images/icons/hamburger.svg) no-repeat center;
   min-width: 3rem;
   min-height: 3rem;
   height: 100%;
   cursor: pointer;
 }
 .close-icon {
-  background: url(images/icons/close.svg) no-repeat center !important;
+  background: url(../images/icons/close.svg) no-repeat center !important;
   min-width: 3rem;
   min-height: 3rem;
   margin: 2.1rem 1rem;
@@ -494,7 +503,7 @@ header{
 }
 .cooks-bg {
   color: #fff;
-  background-image: url(./images/CooksBg.webp);
+  background-image: url(../images/CooksBg.webp);
   background-repeat: repeat;
   background-size: contain;
   background-position: center;
@@ -561,6 +570,16 @@ main {
   min-width: 40%;
 }
 
+/* Athlete Card styles */
+.athlete-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.athlete-card img {
+  height: auto;
+  width: 200px;
+}
 
 /* form styles */
 #contact > div {
