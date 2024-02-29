@@ -629,6 +629,9 @@ main {
   height: auto;
   width: 200px;
 }
+.athlete-card .wider-img {
+  width: 260px;
+}
 
 /* form styles */
 #contact > div {
