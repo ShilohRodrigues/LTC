@@ -7,7 +7,7 @@
   --page-width-small: 800px;
   --left-right-padding: 1.5rem;
   --bg: #fff;
-  --bg-secondary: #121212;
+  --bg-secondary: #212121;
   --primary-color: #E9CB69;
   --primary-active-color: #E9CB69;
   --txt-color: #000;
@@ -204,6 +204,9 @@ section {
 .flex-reverse {
   flex-direction: row-reverse;
 }
+.flex-stretch {
+  align-items: stretch;
+}
 .flex-end {
   align-items: end;
 }
@@ -231,6 +234,9 @@ section {
 }
 .center-txt {
   text-align: center;
+}
+.xtra-padding {
+  padding-bottom: 2rem;
 }
 .slide-in-left {
   transform: translate(-50px, 0px);
@@ -556,6 +562,22 @@ main {
   height: 100%;
 }
 
+/* Checkout styles */
+.checkout-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  color: #fff;
+}
+.checkout-card .bullet {
+  align-self: flex-start;
+}
+
 /* Img with text styles */
 .img-w-txt img {
   height: auto;
@@ -688,8 +710,6 @@ form {
 
 /* Footer Styles */
 #footer {
-  position: sticky;
-  bottom: 0;
   overflow: visible;
   padding: 3rem 0 !important;
   z-index: -1;
